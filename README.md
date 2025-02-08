@@ -57,11 +57,10 @@ Other config files...
 
 #### Navigation
 
-| **Link (Next.js)**                                                 | **Anchor (HTML)**                                            |
-| ------------------------------------------------------------------ | ------------------------------------------------------------ |
-| `<Link href="/users/new">Users with Link</Link>`                   | `<a href="./users/new">Users with anchor</a>`                |
-| Only file content is being downloaded                              | Every assets is being redownloaded                           |
-|![link](https://github.com/user-attachments/assets/c00b0f81-8c8c-42b5-b7a6-c2c95e4c36e2)                                           |![anchor](https://github.com/user-attachments/assets/3956919a-0f36-44a8-8a01-87a49a33d23e)                  |
-
+| **Link (Next.js)**                                                                       | **Anchor (HTML)**                                                                          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `<Link href="/users/new">Users with Link</Link>`                                         | `<a href="./users/new">Users with anchor</a>`                                              |
+| Only file content is being downloaded                                                    | Every assets is being redownloaded                                                         |
+| ![link](https://github.com/user-attachments/assets/c00b0f81-8c8c-42b5-b7a6-c2c95e4c36e2) | ![anchor](https://github.com/user-attachments/assets/3956919a-0f36-44a8-8a01-87a49a33d23e) |
 
 
