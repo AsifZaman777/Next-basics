@@ -63,4 +63,23 @@ Other config files...
 | Only file content is being downloaded                                                    | Every assets is being redownloaded                                                         |
 | ![link](https://github.com/user-attachments/assets/c00b0f81-8c8c-42b5-b7a6-c2c95e4c36e2) | ![anchor](https://github.com/user-attachments/assets/3956919a-0f36-44a8-8a01-87a49a33d23e) |
 
+### Component rendering
 
+#### Next js rendering
+
+![alt text](image-2.png)
+Next js supports both `client-side` and `server-side` rendering.
+
+| **CSR**            | **SSR**            |
+| ------------------ | ------------------ |
+| Large bundles      | Smaller bundles    |
+| Resource intensive | Resource efficient |
+| NO SEO             | SEO                |
+| Less secure        | More secure        |
+
+SSR **cannot**:
+- Listen to browser events  
+- Access the `window`, `document`, or `localStorage` (since they are client-side APIs)  
+- Maintain React state using `useState` and `useEffect` (since these run on the client)  
+
+👉 To handle these, use **Client Components** depending on the situation. 
