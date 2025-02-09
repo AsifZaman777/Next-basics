@@ -68,6 +68,7 @@ Other config files...
 #### Next js rendering
 
 ![alt text](image-2.png)
+
 Next js supports both `client-side` and `server-side` rendering.
 
 | **CSR**            | **SSR**            |
