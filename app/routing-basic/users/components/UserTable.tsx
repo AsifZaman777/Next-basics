@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 //declare a use type
@@ -16,7 +17,11 @@ const UserTable = async () => {
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>name</th>
+                    <th>
+                        <Link href="/routing-basic/users?sortOrder=name">
+                            Name
+                        </Link>
+                    </th>
                     <th>createdAt</th>
                     <th>avater</th>
                 </tr>
