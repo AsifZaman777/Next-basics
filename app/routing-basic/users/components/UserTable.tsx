@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import {sort} from 'fast-sort'
 
 //declare a use type
 interface User {
@@ -9,9 +10,16 @@ interface User {
     id: number
 }
 
-const UserTable = async () => {
+interface Props {
+    sortOrder: string
+}
+
+const UserTable = async ({sortOrder}:Props) => {
     const res = await fetch('https://6787dbd7c4a42c9161088682.mockapi.io/api/users')
     const users: User[] = await res.json()
+
+    const sortedUsers = sortOrder === 'name' ? sort(users).asc(user=>user.name) : users
+
     return (
         <table>
             <thead>
@@ -22,16 +30,15 @@ const UserTable = async () => {
                             Name
                         </Link>
                     </th>
-                    <th>createdAt</th>
+                
                     <th>avater</th>
                 </tr>
             </thead>
             <tbody>
-                {users.map((user: User) => (
+                {sortedUsers.map((user: User) => (
                     <tr key={user.id}>
                         <td>{user.id}</td>
                         <td>{user.name}</td>
-                        <td>{user.createdAt}</td>
                         <td><img src={user.avater} alt={user.name} width="50" height="50" /></td>
                     </tr>
                 ))}

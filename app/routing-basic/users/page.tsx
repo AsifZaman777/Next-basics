@@ -7,10 +7,9 @@ interface Props {
 
 
 const page = async ({searchParams:{sortOrder}}:Props) => {
-   console.log(sortOrder)
   return (
     <div>Users table
-      <UserTable />
+      <UserTable sortOrder={sortOrder} />
     </div>
   )
 }
