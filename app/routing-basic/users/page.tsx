@@ -6,7 +6,8 @@ interface Props {
 }
 
 
-const page = async ({searchParams:{sortOrder}}:Props) => {
+const page = async ({searchParams}:Props) => {
+  const {sortOrder} = await searchParams;  //nextjs 15 searchParams is asynchronous
   return (
     <div>Users table
       <UserTable sortOrder={sortOrder} />
